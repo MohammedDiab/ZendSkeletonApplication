@@ -32,7 +32,7 @@ jobs:
 
       - run:
           name: install zend test
-          command: php composer.phar composer require --dev zendframework/zend-test
+          command: php composer.phar require --dev zendframework/zend-test
 
       - save_cache:
           paths:
