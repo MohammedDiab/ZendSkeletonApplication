@@ -30,6 +30,10 @@ jobs:
 
       - run: php composer.phar install -n --prefer-dist
 
+      - run:
+          name: install zend test
+          command: php composer.phar composer require --dev zendframework/zend-test
+
       - save_cache:
           paths:
             - ./vendor
