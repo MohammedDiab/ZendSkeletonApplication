@@ -16,7 +16,7 @@ jobs:
 
     working_directory: ~/repo
 
-    install_composer: &install_composer
+install_composer: &install_composer
     command: |
         cd /tmp
         EXPECTED_SIGNATURE=$(curl -q https://composer.github.io/installer.sig)
@@ -32,6 +32,7 @@ jobs:
         RESULT=$?
         rm composer-setup.php
         exit $RESULT
+ 
 	
     steps:
       - checkout
